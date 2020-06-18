@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'job.apps.JobConfig',
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,7 +84,7 @@ DATABASES = {
         'HOST' : 'localhost' ,
         'PORT' : '5432',
     }
-} 
+}
 
 
 # Password validation
