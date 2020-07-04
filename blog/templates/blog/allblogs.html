@@ -56,7 +56,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-          <a class="nav-link " href="#">Blog<span class="sr-only"></span></a>
+          <a class="nav-link active" href="#">Blog<span class="sr-only"></span></a>
           <a class="nav-link " href="#">Resume</a>
           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Linkedin</a>
       </ul>
@@ -68,37 +68,15 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Portfolio !</h1>
-      <p class="lead text-muted">This page shows here all the project & achievements  I've done so far.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Email</a>
-        <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
-      </p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-
-       {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-image-top" height=600 width=300 src="{{job.image.url}}" />
-            <div class="card-body">
-              <p class="card-text">{{job.summary}}</p>
-            </div>
-          </div>
-        </div>
-       {% endfor %}
-      </div>
-    </div>
-  </div>
 
 </main>
+<div class="container">
+ <h1 class='text-center pt-5'> My Blog </h1>
+ <br/>
+ <br/>
+ <br/>
+ <h2 >Hello </h2>
+</div>
 
 <footer class="text-muted">
   <div class="container">
