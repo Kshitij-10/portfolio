@@ -78,29 +78,29 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-if 'TRAVIS' in os.environ:
-    DATABASES = {
-        'default': {
-            'ENGINE':   'django.db.backends.postgresql_psycopg2',
-            'NAME':     'travisci',
-            'USER':     'postgres',
-            'PASSWORD': '',
-            'HOST':     'localhost',
-            'PORT':     '',
-        }
-    }
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'portfoliodatab',
-#         'USER' : 'postgres',
-#         'PASSWORD' : 'KSHITIJ2000',
-#         'HOST' : 'localhost' ,
-#         'PORT' : '5432',
+# if 'TRAVIS' in os.environ:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE':   'django.db.backends.postgresql_psycopg2',
+#             'NAME':     'travisci',
+#             'USER':     'postgres',
+#             'PASSWORD': '',
+#             'HOST':     'localhost',
+#             'PORT':     '',
+#         }
 #     }
-# }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'portfoliodatab',
+        'USER' : 'postgres',
+        'PASSWORD' : 'KSHITIJ2000',
+        'HOST' : 'localhost' ,
+        'PORT' : '5432',
+    }
+}
 
 
 # Password validation
@@ -143,6 +143,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+import django_heroku
+django_heroku.settings(locals())
