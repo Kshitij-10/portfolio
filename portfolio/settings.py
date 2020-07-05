@@ -91,16 +91,16 @@ if 'TRAVIS' in os.environ:
     }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfoliodatab',
-        'USER' : 'postgres',
-        'PASSWORD' : 'KSHITIJ2000',
-        'HOST' : 'localhost' ,
-        'PORT' : '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'portfoliodatab',
+#         'USER' : 'postgres',
+#         'PASSWORD' : 'KSHITIJ2000',
+#         'HOST' : 'localhost' ,
+#         'PORT' : '5432',
+#     }
+# }
 
 
 # Password validation
