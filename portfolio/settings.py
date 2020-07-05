@@ -25,11 +25,11 @@ SECRET_KEY = '*&dn(os04ygq=-0_c(r)lgxmhzz5jn!cmos)-afm25h3^7*^qd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
 
 
 # Application definition
-ALLOWED_HOSTS = ['https://portfolioks.herokuapp.com']
+ALLOWED_HOSTS = ['portfolioks.herokuapp.com']
 
 
 INSTALLED_APPS = [
