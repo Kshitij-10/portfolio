@@ -32,6 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['portfolioks.herokuapp.com']
 
 
+
 INSTALLED_APPS = [
     'job.apps.JobConfig',
     'blog.apps.BlogConfig',
@@ -79,8 +80,20 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 if 'TRAVIS' in os.environ:
     DATABASES = {
+        'default': {
+            'ENGINE':   'django.db.backends.postgresql_psycopg2',
+            'NAME':     'travisci',
+            'USER':     'postgres',
+            'PASSWORD': '',
+            'HOST':     'localhost',
+            'PORT':     '',
+        }
+    }
+
+
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'portfoliodatab',
         'USER' : 'postgres',
         'PASSWORD' : 'KSHITIJ2000',
